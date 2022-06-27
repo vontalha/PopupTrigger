@@ -1,0 +1,19 @@
+{
+    "name": "triggerExp",
+    "version":"1.0",
+    "manifest_version": 3, 
+    "description": "Extension trigger",
+    "background": {
+        "service_worker": "background.js"
+        
+    },
+    "permissions":["storage", "tabs", "windows", "scripting", "activeTab"], 
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts":[{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }]
+
+}
